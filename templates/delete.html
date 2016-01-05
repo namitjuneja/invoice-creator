@@ -1,0 +1,7 @@
+{% for entry in data.list %}
+<form action="/delete_data">
+    <input type="checkbox" name="data" value="{{entry}}">{{entry}}<br />
+{% endfor %}
+<input type="text" name = "database" value = {{data.database}} hidden = "true">
+<input type="submit">
+</form>

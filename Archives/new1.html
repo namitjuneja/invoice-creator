@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Create Parchi</title>
+</head>
+
+<body>
+
+    <input id="my-input" class="typeahead" type="text" placeholder="Company Name"><br><br>
+    <input id="my-input" class="typeahead" type="text" placeholder="Company Address"><br><br>
+    <input id="my-input" class="typeahead" type="text" placeholder="Person's Name"><br><br>
+    <input id="my-input" class="typeahead" type="text" placeholder="Person's Contact Number"><br><br>
+    <input id="my-input" class="typeahead" type="text" placeholder="Date"><br><br>
+
+
+
+  <!-- Load jQuery and the typeahead JS files -->
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script src="static/js/typeahead.min.js"></script>
+  <script src="static/js/typeahead.jquery.js"></script>
+  <script src="static/js/bloodhound.js"></script>
+
+
+  <script type="text/javascript">
+    // Waiting for the DOM ready...
+    $(function(){
+
+      // applied typeahead to the text input box
+      $('#my-input').typeahead({
+        name: 'countries',
+
+        // data source
+        prefetch: 'static/data/countries.json',
+
+        // max item numbers list in the dropdown
+        limit: 10
+      });
+
+    });
+  </script>
+</body> 
+</html>

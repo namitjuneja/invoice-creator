@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+        <meta name="viewport" content="width=device-width" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Apex Technologies</title>
+        <link href="static/styles.css" media="all" rel="stylesheet" type="text/css" />
+</head>
+
+<body >
+
+        <table class="body-wrap">
+                <tr>
+                        <td></td>
+                        <td class="container" width="600">
+                                <div class="content">
+                                        <table class="main" width="100%" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                        <td class="content-wrap aligncenter">
+                                                                <table width="100%" cellpadding="0" cellspacing="0">
+                                                                        <tr>
+                                                                                <td class="content-block">
+                                                                                        <h1 class="aligncenter">Apex Technologies</h1>
+                                                                                        <h4> NOIDA </h4>
+                                                                                </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                                <td class="content-block">
+                                                                                        <h2 class="aligncenter">Estimate</h2>
+                                                                                </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                                <td class="content-block aligncenter">
+                                                                                        <table class="invoice">
+                                                                                                <tr>
+                                                                                                        <td>{{data.company_name}}
+                                                                                                                <br>{{data.company_add}}
+                                                                                                                <br>{{data.person_name}}
+                                                                                                                <br>{{data.person_contact}}
+                                                                                                                <br>{{data.date}}</td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                        <td>
+                                                                                                                <table class="invoice-items" cellpadding="0" cellspacing="0">
+                                                                                                                        <tr>
+                                                                                                                                <th >&nbsp;S. No.&nbsp;</th>
+                                                                                                                                <th >&nbsp;QTY&nbsp;</th>
+                                                                                                                                <th >&nbsp;Product&nbsp;</th>
+                                                                                                                                <th >&nbsp;@&nbsp;</th>
+                                                                                                                                <th >&nbsp;Amount&nbsp;</th>
+
+                                                                                                                        </tr>
+                                                                                                                          {% for item in data.bill_data %}
+                                                                                                                        <tr>
+                                                                                                                               <td width="50px">&nbsp;{{item.sno}}&nbsp;</td>
+                                                                                                                                <td >&nbsp;{{item.qty}}&nbsp;</td>
+                                                                                                                                <td >&nbsp;{{item.product}}&nbsp;</td>
+                                                                                                                                <td >&nbsp;{{item.at}}&nbsp;</td>
+                                                                                                                                <td >&nbsp;{{item.amt}}&nbsp;</td>
+                                                                                                                        </tr>
+                                                                                                                        {% endfor %}
+
+                                                                                                                        <tr class="total">
+
+                                                                                                                                <td >Total</td>
+                                                                                                                                <td >{{data.total_qty}}</td>
+                                                                                                                                <td></td><td></td>
+                                                                                                                                <td >{{data.total_amt}}</td>
+                                                                                                                        </tr>
+                                                                                                                </table>
+                                                                                                        </td>
+
+                                                                                                </tr>
+                                                                                        </table>
+                                                                                </td>
+                                                                        </tr>
+                                                                        
+                                                                        <tr>
+                                                                                <td class="content-block aligncenter">
+                                                                                        <strong>Recieved &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>
+                                                                                </td>
+                                                                        </tr>
+                                                                </table>
+                                                        </td>
+                                                </tr>
+                                        </table>
+                                </div>
+                        </td>
+                        <td></td>
+
+
+
+                        <td></td>
+                        <td class="container" width="600">
+                                <div class="content">
+                                        <table class="main" width="100%" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                        <td class="content-wrap aligncenter">
+                                                                <table width="100%" cellpadding="0" cellspacing="0">
+                                                                        <tr>
+                                                                                <td class="content-block">
+                                                                                        <h1 class="aligncenter">Apex Technologies</h1>
+                                                                                        <h4> NOIDA </h4>
+                                                                                </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                                <td class="content-block">
+                                                                                        <h2 class="aligncenter">Estimate</h2>
+                                                                                </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                                <td class="content-block aligncenter">
+                                                                                        <table class="invoice">
+                                                                                                <tr>
+                                                                                                        <td>{{data.company_name}}
+                                                                                                                <br>{{data.company_add}}
+                                                                                                                <br>{{data.person_name}}
+                                                                                                                <br>{{data.person_contact}}
+                                                                                                                <br>{{data.date}}</td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                        <td>
+                                                                                                                <table class="invoice-items" cellpadding="0" cellspacing="0">
+                                                                                                                        <tr>
+                                                                                                                                <th >&nbsp;S. No.&nbsp;</th>
+                                                                                                                                <th >&nbsp;QTY&nbsp;</th>
+                                                                                                                                <th >&nbsp;Product&nbsp;</th>
+                                                                                                                                <th >&nbsp;@&nbsp;</th>
+                                                                                                                                <th >&nbsp;Amount&nbsp;</th>
+
+                                                                                                                        </tr>
+                                                                                                                          {% for item in data.bill_data %}
+                                                                                                                        <tr>
+                                                                                                                               <td width="50px">&nbsp;{{item.sno}}&nbsp;</td>
+                                                                                                                                <td >&nbsp;{{item.qty}}&nbsp;</td>
+                                                                                                                                <td >&nbsp;{{item.product}}&nbsp;</td>
+                                                                                                                                <td >&nbsp;{{item.at}}&nbsp;</td>
+                                                                                                                                <td >&nbsp;{{item.amt}}&nbsp;</td>
+                                                                                                                        </tr>
+                                                                                                                        {% endfor %}
+
+                                                                                                                        <tr class="total">
+
+                                                                                                                                <td >Total</td>
+                                                                                                                                <td >{{data.total_qty}}</td>
+                                                                                                                                <td></td><td></td>
+                                                                                                                                <td >{{data.total_amt}}</td>
+                                                                                                                        </tr>
+                                                                                                                </table>
+                                                                                                        </td>
+
+                                                                                                </tr>
+                                                                                        </table>
+                                                                                </td>
+                                                                        </tr>
+                                                                        
+                                                                        <tr>
+                                                                                <td class="content-block aligncenter">
+                                                                                        <strong>Recieved &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>
+                                                                                </td>
+                                                                        </tr>
+                                                                </table>
+                                                        </td>
+                                                </tr>
+                                        </table>
+                                </div>
+                        </td>
+                        <td></td>
+
+
+                </tr>
+        </table>
+
+</body>
+
+</html>

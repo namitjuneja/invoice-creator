@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+        <meta name="viewport" content="width=device-width" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Billing e.g. invoices and receipts</title>
+        <link href="static/styles.css" media="all" rel="stylesheet" type="text/css" />
+         <script src="static/jquery.js"></script>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/EmailMessage">
+<form action="/createnew" method="POST">
+        <table class="body-wrap">
+                <tr>
+                        <td></td>
+                        <td class="container" width="600">
+                                <div class="content">
+                                        <table class="main" width="100%" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                        <td class="content-wrap aligncenter">
+                                                                <table width="100%" cellpadding="0" cellspacing="0">
+                                                                        <tr>
+                                                                                <td class="content-block">
+                                                                                        <h1 class="aligncenter">APEX TECHNOLOGIES</h1>
+                                                                                        <h4> NOIDA </h4>
+                                                                                </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                                <td class="content-block">
+                                                                                        <h2 class="aligncenter">Estimate</h2>
+                                                                                </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                                <td class="content-block aligncenter">
+                                                                                        <table class="invoice">
+                                                                                                <tr>
+                                                                                                        <td><input type="test" name="company_name" placeholder="Company Name">
+                                                                                                                <br><input type="test" name="company_add"  placeholder="Company Address">
+                                                                                                                <br><input type="test" name="person_name"  placeholder="Person's Name">
+                                                                                                                <br><input type="test" name="person_contact"  placeholder="Contact Number">
+                                                                                                                <br><input type="test" name="date"  placeholder="Date"></td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                        <td>
+                                                                                                                <table class="invoice-items item-table" cellpadding="0" cellspacing="0">
+                                                                                                                        <tr>
+                                                                                                                                <th class="alignleft">&nbsp;S. No.&nbsp;</th>
+                                                                                                                                <th class="aligleft">&nbsp;QTY&nbsp;</th>
+                                                                                                                                <th class="alignleft">&nbsp;Product&nbsp;</th>
+                                                                                                                                <th class="alignleft">&nbsp;@&nbsp;</th>
+                                                                                                                                <th class="alignleft">&nbsp;Amount&nbsp;</th>
+
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                               <td  class="alignleft"><input style="width: 50px;!important" type="text" name="sno1" value="1"></td>
+                                                                                                                               <td class="alignleft"><input style="width: 50px;!important" type="text" name="qty1"></td>
+                                                                                                                                <td class="alignleft"><input type="text1" name="product1"></td>
+                                                                                                                                <td class="alignleft"><input style="width: 50px;!important" type="text" name="at1"></td>
+                                                                                                                                <td class="alignleft"><input style="width: 50px;!important" type="text" name="amt1"></td>
+                                                                                                                        </tr>
+
+                                                                                                                      
+                                                                                                                </table>
+                                                                                                                <input type="text" class="manas" name="manas" hidden="true" value="1">
+                                                                                                                <a href="#" title="" class="add-row">Add Row</a>
+                                                                                                        </td>
+
+                                                                                                </tr>
+                                                                                        </table>
+                                                                                </td>
+                                                                        </tr>
+                                                                        
+                                                                        <tr>
+                                                                                <td class="content-block alignright">
+                                                                                        <strong>Recieved &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>
+                                                                                </td>
+                                                                        </tr>
+                                                                </table>
+                                                        </td>
+                                                </tr>
+                                        </table>
+                                </div>
+                        </td>
+                        <td></td>
+
+
+                </tr>
+        </table>
+        <input type="submit">
+</form>
+<script>
+jQuery(function(){
+
+    var counter = 1;
+    jQuery('a.add-row').click(function(event){
+        event.preventDefault();
+        counter++;
+        var new_element = '<tr><td class="alignleft"><input style="width: 50px;!important" type="text" name="sno' + String (counter) + '"  value=' + String (counter) + '></td><td class="alignleft"><input style="width: 50px;!important" type="text" name="qty' + String (counter) + '"></td><td class="alignleft"><input type="text" name="product' + String (counter) + '"></td><td class="alignleft"><input style="width: 50px;!important"  type="text" name="at' + String (counter) + '"></td><td class="alignleft"><input style="width: 50px;!important" type="text" name="amt' + String (counter) + '"></td></tr>'
+        var newRow = jQuery(new_element);
+        jQuery('table.item-table').append(newRow);
+        jQuery('input.manas').val(counter);
+    });
+});
+
+</script>
+</body>
+
+</html>
